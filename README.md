@@ -1,7 +1,7 @@
 # CPSC 6160 Final Project
 
 ### Contributors
-Roshan Longanathan
+Roshankumar Longanathan
 
 Parita Brahmbhatt
 
