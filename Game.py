@@ -9,14 +9,15 @@ import screen as s
 import pygame
 #from pygame import mixer
 import welcome_screen as w
-from Level2 import Level2
 
-from settings import *
+import Level1_map as l1
+import Level2_map as l2
+import Level 
 
 
 FramePerSec = pygame.time.Clock()
 FPS = 180
-background_sprite = pygame.image.load('./Images/img.png')
+# background_sprite = pygame.image.load('./Images/background.png')
 class Game(s.Screen):
     def run(self):
         running = False
@@ -58,29 +59,17 @@ class Game(s.Screen):
 
         #Main Screen
         # test_tile=pygame.sprite.Group(Tile((100,100),200))
-        level = Level2(level_map,s.Screen.scrn)
-        window = pygame.display.set_mode((1200, 700))
-        bg = pygame.transform.scale(background_sprite, (1200, 700))
-        i=0
-        while True:
+        level = Level.Level(l1.level_map,s.Screen.scrn)
+
+        while running:
             clock.tick(180)
-            window.fill((0, 0, 0))
-            window.blit(bg, (i, 0))
-            window.blit(bg, (1200 + i, 0))
-            if (i == -1200):
-                window.blit(bg, (1200 + i, 0))
-                i = 0
-            i -= 1
-            # pygame.display.flip()
+            #pygame.display.flip()
         
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     running = False
 
-                running=True
-
-            # s.Screen.scrn.fill((106, 159, 181))
-            # s.Screen.scrn.blits(background_sprite, (1200,700))
+            s.Screen.scrn.fill((106, 159, 181))
             level.run()
 
             pygame.display.update()
