@@ -13,6 +13,7 @@ class Welcome_Screen(s.Screen):
     pygame.init()
     wlcm_scrn = pygame.display.set_mode((1200,700))
     pygame.display.set_caption(s.Screen.title)
+    text = s.Screen.font.render(s.Screen.title, True, (255,255,255), (18,18,18))
     #pygame.display.set_icon(s.Screen.icon)
     
     
@@ -34,6 +35,7 @@ class Button(Welcome_Screen):
         #self.text_rect = self.text.get_rect(center=(self.x_pos, self.y_pos))
 
     def draw_btn(self):
+        Welcome_Screen.wlcm_scrn.blit(Welcome_Screen.text,(100,150))
         Welcome_Screen.wlcm_scrn.blit(self.image, self.btn_rect)
         #Welcome_Screen.wlcm_scrn.blit(self.text,self.text_rect)
 

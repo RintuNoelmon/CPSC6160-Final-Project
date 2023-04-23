@@ -21,9 +21,9 @@ class Screen():
     #icon = pygame.image.load(r'Images/pong.ico')
     #pygame.display.set_icon(icon)
     
-    main_font = pygame.font.SysFont("cambria", 50)
+    font = pygame.font.Font('freesansbold.ttf', 50)
 
-    scrn = pygame.display.set_mode((0,0),pygame.FULLSCREEN)
+    scrn = pygame.display.set_mode((1200,700))
     
     clock = pygame.time.Clock()
         

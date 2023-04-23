@@ -8,12 +8,12 @@ Created on Wed Apr 19 14:47:57 2023
 level_map = [
     '          ',
     '          ',
-    '                   X',
-    '         X       XXX                        ', 
-    '        XX      XXXX          XX            ',      
-    'P                        X    XX       X   XXXXXXX X           ',
-    'X              X       XXX    XX      XX   XXXXXXXXXX                      X',      
-    'XX                            XX     XXX   XXXXXXXXXXXXX                  XX',
-    'XXX       X        XXX        XX    XXXX   XXXXXXXXXXXXXXX               XXX',
-    'XXXX      XXXXX               XX   XXXXX   XXXXXXXXXXXXXXXXX            XXXX',
-    'XXXX      XXXXX               XX  XXXXXX   XXXXXXXXXXXXXXXXXX   XXXXXX']
+    '               X',
+    '   X                              ', 
+    '  XX                       XX            ',      
+    'P                    XX    XX  X                ',
+    'X             XXXX  XXX    XX  XX    XXXXXXXXXX                     X',      
+    'XX                             XXX   XXXXXXXXXXXXX                 XX',
+    'XXX        X                   XXXX  XXXXXXXXXXXXXXX              XXX',
+    'XXXX   XXXXX                         XXXXXXXXXXXXXXXXX           XXXX',
+    'XXXX   XXXXX                         XXXXXXXXXXXXXXXXXX  XXXXXX']
