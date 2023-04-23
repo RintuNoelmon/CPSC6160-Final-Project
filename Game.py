@@ -9,10 +9,9 @@ import screen as s
 import pygame
 #from pygame import mixer
 import welcome_screen as w
+from Level2 import Level2
 
-import Level1_map as l1
-import Level2_map as l2
-import Level 
+from settings import *
 
 
 FramePerSec = pygame.time.Clock()
@@ -59,15 +58,17 @@ class Game(s.Screen):
 
         #Main Screen
         # test_tile=pygame.sprite.Group(Tile((100,100),200))
-        level = Level.Level(l1.level_map,s.Screen.scrn)
+        level = Level2(level_map,s.Screen.scrn)
 
-        while running:
+        while True:
             clock.tick(180)
             #pygame.display.flip()
         
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     running = False
+
+                running=True
 
             s.Screen.scrn.fill((106, 159, 181))
             level.run()
