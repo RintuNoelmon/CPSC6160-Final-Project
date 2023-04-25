@@ -13,6 +13,7 @@ import welcome_screen as w
 import Level1_map as l1
 import Level2_map as l2
 import Level 
+import dialogueBox as db
 
 
 FramePerSec = pygame.time.Clock()
@@ -37,8 +38,8 @@ class Game(s.Screen):
 
         while welcome_screen == True:
             w.Welcome_Screen.wlcm_scrn.fill((18,18,18))
-            button_start.draw_btn()
-            button_exit.draw_btn()
+            button_start.draw_btn_welcome()
+            button_exit.draw_btn_welcome()
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     welcome_screen = False
@@ -59,8 +60,17 @@ class Game(s.Screen):
 
         #Main Screen
         # test_tile=pygame.sprite.Group(Tile((100,100),200))
+        #Dialogu box before level 1
+        s.Screen.scrn.fill((106, 159, 181))
+        dialogue_box = db.Dialogue(100, 100, 600, 100, text_speed=50)
+        dialogue_box.display("Hello! How are you?")
+        pygame.time.delay(5000)  # wait for 2 seconds
+        dialogue_box.display("Great, thanks for asking")
+        pygame.time.delay(2000)
+        
+        #Level 1 implementation
         level = Level.Level(l1.level_map,s.Screen.scrn)
-
+        
         while running:
             clock.tick(180)
             #pygame.display.flip()
